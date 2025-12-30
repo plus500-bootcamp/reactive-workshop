@@ -29,170 +29,27 @@
             <button type="submit" class="add-btn">Add</button>
           </div>
         </form>
+
+        <!-- Filter Controls -->
+        <div class="filter-controls">
+          <button class="filter-btn active" data-status="all">All</button>
+          <button class="filter-btn" data-status="uncompleted">
+            Uncompleted
+          </button>
+          <select id="priorityFilter" class="priority-select">
+            <option value="all">All Priorities</option>
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+          </select>
+        </div>
       </header>
 
       <!-- Component 2: Task List -->
       <ul class="task-list">
-        <li class="task-item" data-priority="high">
-          <input type="checkbox" id="task1" class="task-checkbox" />
-          <label for="task1" class="task-label">
-            <span class="task-text">Complete HTML/CSS project</span>
-            <span class="priority-badge" data-priority="high">High</span>
-          </label>
-        </li>
-
-        <li class="task-item" data-priority="medium">
-          <input type="checkbox" id="task2" class="task-checkbox" checked />
-          <label for="task2" class="task-label">
-            <span class="task-text">Read article about Flexbox</span>
-            <span class="priority-badge" data-priority="medium">Medium</span>
-          </label>
-        </li>
-
-        <li class="task-item" data-priority="low">
-          <input type="checkbox" id="task3" class="task-checkbox" />
-          <label for="task3" class="task-label">
-            <span class="task-text">Prepare shopping list for next week</span>
-            <span class="priority-badge" data-priority="low">Low</span>
-          </label>
-        </li>
-
-        <li class="task-item" data-priority="high">
-          <input type="checkbox" id="task4" class="task-checkbox" checked />
-          <label for="task4" class="task-label">
-            <span class="task-text">Send email to manager</span>
-            <span class="priority-badge" data-priority="high">High</span>
-          </label>
-        </li>
-
-        <li class="task-item" data-priority="medium">
-          <input type="checkbox" id="task5" class="task-checkbox" />
-          <label for="task5" class="task-label">
-            <span class="task-text">Update resume</span>
-            <span class="priority-badge" data-priority="medium">Medium</span>
-          </label>
-        </li>
-
-        <li class="task-item" data-priority="low">
-          <input type="checkbox" id="task6" class="task-checkbox" checked />
-          <label for="task6" class="task-label">
-            <span class="task-text">Watch CSS Grid tutorial video</span>
-            <span class="priority-badge" data-priority="low">Low</span>
-          </label>
-        </li>
-
-        <li class="task-item" data-priority="medium">
-          <input type="checkbox" id="task7" class="task-checkbox" />
-          <label for="task7" class="task-label">
-            <span class="task-text">Review pull requests on GitHub</span>
-            <span class="priority-badge" data-priority="medium">Medium</span>
-          </label>
-        </li>
-
-        <li class="task-item" data-priority="high">
-          <input type="checkbox" id="task8" class="task-checkbox" />
-          <label for="task8" class="task-label">
-            <span class="task-text">Fix bug in production environment</span>
-            <span class="priority-badge" data-priority="high">High</span>
-          </label>
-        </li>
-
-        <li class="task-item" data-priority="low">
-          <input type="checkbox" id="task9" class="task-checkbox" />
-          <label for="task9" class="task-label">
-            <span class="task-text">Organize desktop files</span>
-            <span class="priority-badge" data-priority="low">Low</span>
-          </label>
-        </li>
-
-        <li class="task-item" data-priority="medium">
-          <input type="checkbox" id="task10" class="task-checkbox" checked />
-          <label for="task10" class="task-label">
-            <span class="task-text">Schedule team meeting for next week</span>
-            <span class="priority-badge" data-priority="medium">Medium</span>
-          </label>
-        </li>
-
-        <li class="task-item" data-priority="high">
-          <input type="checkbox" id="task11" class="task-checkbox" />
-          <label for="task11" class="task-label">
-            <span class="task-text">Submit quarterly report by Friday</span>
-            <span class="priority-badge" data-priority="high">High</span>
-          </label>
-        </li>
-
-        <li class="task-item" data-priority="low">
-          <input type="checkbox" id="task12" class="task-checkbox" />
-          <label for="task12" class="task-label">
-            <span class="task-text">Research new JavaScript frameworks</span>
-            <span class="priority-badge" data-priority="low">Low</span>
-          </label>
-        </li>
-
-        <li class="task-item" data-priority="medium">
-          <input type="checkbox" id="task13" class="task-checkbox" />
-          <label for="task13" class="task-label">
-            <span class="task-text">Update project documentation</span>
-            <span class="priority-badge" data-priority="medium">Medium</span>
-          </label>
-        </li>
-
-        <li class="task-item" data-priority="high">
-          <input type="checkbox" id="task14" class="task-checkbox" />
-          <label for="task14" class="task-label">
-            <span class="task-text">Prepare presentation for client</span>
-            <span class="priority-badge" data-priority="high">High</span>
-          </label>
-        </li>
-
-        <li class="task-item" data-priority="low">
-          <input type="checkbox" id="task15" class="task-checkbox" checked />
-          <label for="task15" class="task-label">
-            <span class="task-text">Clean up code comments</span>
-            <span class="priority-badge" data-priority="low">Low</span>
-          </label>
-        </li>
-
-        <li class="task-item" data-priority="medium">
-          <input type="checkbox" id="task16" class="task-checkbox" />
-          <label for="task16" class="task-label">
-            <span class="task-text">Test website on different browsers</span>
-            <span class="priority-badge" data-priority="medium">Medium</span>
-          </label>
-        </li>
-
-        <li class="task-item" data-priority="high">
-          <input type="checkbox" id="task17" class="task-checkbox" />
-          <label for="task17" class="task-label">
-            <span class="task-text">Deploy website to production</span>
-            <span class="priority-badge" data-priority="high">High</span>
-          </label>
-        </li>
-
-        <li class="task-item" data-priority="low">
-          <input type="checkbox" id="task18" class="task-checkbox" />
-          <label for="task18" class="task-label">
-            <span class="task-text">Read design patterns book</span>
-            <span class="priority-badge" data-priority="low">Low</span>
-          </label>
-        </li>
-
-        <li class="task-item" data-priority="medium">
-          <input type="checkbox" id="task19" class="task-checkbox" />
-          <label for="task19" class="task-label">
-            <span class="task-text">Optimize database queries</span>
-            <span class="priority-badge" data-priority="medium">Medium</span>
-          </label>
-        </li>
-
-        <li class="task-item" data-priority="high">
-          <input type="checkbox" id="task20" class="task-checkbox" />
-          <label for="task20" class="task-label">
-            <span class="task-text">Respond to urgent customer tickets</span>
-            <span class="priority-badge" data-priority="high">High</span>
-          </label>
-        </li>
+        <!-- Dynamically rendered by script.js -->
       </ul>
     </div>
+    <script type="module" src="script.js"></script>
   </body>
 </html>

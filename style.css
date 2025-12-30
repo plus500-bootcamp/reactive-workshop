@@ -1,0 +1,266 @@
+/* ==============================
+   Reset and General Styling
+   ============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #667eea;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+/* ==============================
+   Main Container - Full Screen
+   ============================== */
+.app-container {
+  background-color: #ffffff;
+  width: 90%;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+/* ==============================
+   Sticky Header
+   ============================== */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 100;
+  padding: 30px 30px 20px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.sticky-header h1 {
+  color: #667eea;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* ==============================
+   Add Task Form with Flexbox
+   ============================== */
+.add-task-form {
+  margin-bottom: 0;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+}
+
+#taskInput {
+  flex-grow: 1;
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  min-width: 0; /* Allows flex to shrink the field if needed */
+}
+
+#taskInput:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+/* Challenge 4: Priority Field */
+.priority-select {
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: white;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.priority-select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+/* Challenge 2: Interactive Button */
+.add-btn {
+  padding: 12px 25px;
+  background-color: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(102, 126, 234, 0.3);
+}
+
+.add-btn:hover {
+  background-color: #5568d3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(102, 126, 234, 0.4);
+}
+
+.add-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 4px rgba(102, 126, 234, 0.3);
+}
+
+/* ==============================
+   Task List
+   ============================== */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  padding: 18px 30px;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.2s ease;
+}
+
+.task-item:hover {
+  background-color: #f9f9f9;
+}
+
+.task-item:last-child {
+  border-bottom: none;
+}
+
+/* Styled Checkbox */
+.task-checkbox {
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+  cursor: pointer;
+  accent-color: #667eea;
+}
+
+/* Label with Flexbox */
+.task-label {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+}
+
+.task-text {
+  transition: all 0.3s ease;
+}
+
+/* Challenge 1: "Completed" Indication (Strikethrough) */
+.task-checkbox:checked + .task-label .task-text {
+  text-decoration: line-through;
+  color: #999;
+  opacity: 0.6;
+}
+
+/* Challenge 4: Priority Tags */
+.priority-badge {
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+/* Styles by priority */
+.priority-badge[data-priority="high"] {
+  background-color: #fee;
+  color: #c33;
+  border: 1px solid #fcc;
+}
+
+.priority-badge[data-priority="medium"] {
+  background-color: #fff4e6;
+  color: #d97706;
+  border: 1px solid #fed7aa;
+}
+
+.priority-badge[data-priority="low"] {
+  background-color: #f0f9ff;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+}
+
+/* Background color for item by priority */
+.task-item[data-priority="high"] {
+  border-left: 4px solid #c33;
+}
+
+.task-item[data-priority="medium"] {
+  border-left: 4px solid #d97706;
+}
+
+.task-item[data-priority="low"] {
+  border-left: 4px solid #0369a1;
+}
+
+/* ==============================
+   Responsive for Small Screens
+   ============================== */
+@media (max-width: 480px) {
+  .sticky-header {
+    padding: 20px 15px 15px;
+  }
+
+  .sticky-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .input-group {
+    flex-direction: column;
+  }
+
+  #taskInput,
+  .priority-select,
+  .add-btn {
+    width: 100%;
+  }
+
+  .task-item {
+    padding: 15px;
+  }
+
+  .task-label {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .priority-badge {
+    margin-left: 0;
+  }
+}
+
+/* ==============================
+   Additional Animations
+   ============================== */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.task-item {
+  animation: slideIn 0.3s ease;
+}
